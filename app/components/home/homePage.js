@@ -146,6 +146,7 @@ export default function HomePage() {
               <li className="keys">AUTH_FACEBOOK_CLIENT_SECRET</li>
               <li className="keys">AUTH_TWITTER_CLIENT_ID</li>
               <li className="keys">AUTH_TWITTER_CLIENT_SECRET</li>
+              <li className="keys">AUTH_TRUST_HOST=TRUE</li>
             </ul>
             <p>
               All the keys starting with &ldquo;AUTH&ldquo; are for Auth.js
