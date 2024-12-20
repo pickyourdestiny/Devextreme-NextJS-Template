@@ -1,0 +1,9 @@
+@import "../../../../themes/generated/variables.base.scss";
+
+.create-account-form {
+  .login-link {
+    color: $base-accent;
+    font-size: 16px;
+    text-align: center;
+  }
+}

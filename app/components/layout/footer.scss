@@ -1,0 +1,20 @@
+@import "../../../themes/generated/variables.base.scss";
+
+.footer {
+  display: block;
+  color: rgba($base-accent, alpha($base-accent) * 0.7);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.screen-x-small {
+  .footer {
+    justify-content: center;
+  }
+}

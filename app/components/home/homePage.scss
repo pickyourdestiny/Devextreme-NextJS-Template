@@ -1,0 +1,13 @@
+.keys {
+  .screen-x-small & {
+    font-size: smaller;
+  }
+}
+
+#home-page-scroll {
+  height: calc(100vh - 275px);
+
+  .screen-x-small & {
+    height: calc(100vh - 150px);
+  }
+}

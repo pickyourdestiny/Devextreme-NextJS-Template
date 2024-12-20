@@ -1,0 +1,12 @@
+@import "../../../../themes/generated/variables.base.scss";
+
+.policy-info {
+  margin: 20px 0 10px 0;
+  color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+  font-size: 14px;
+  font-style: normal;
+
+  a {
+    color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+  }
+}
