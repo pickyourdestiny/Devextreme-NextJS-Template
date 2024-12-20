@@ -125,12 +125,12 @@ export default function HomePage() {
               provides step-by-step instructions
             </p>
             <p>
-              I also added a complete login and registration boilerplate using
-              Auth.js with the Google, Facebook, and Twitter social logins. You
-              can login or register with credentials or a social account. The
-              server component for Auth.js can be found in the root of the
-              project in the auth.js file, and the custom server functions
-              accompanying this boilerplate can be found in
+              Authentication includes complete signin and registration flows
+              using Auth.js with the Google, Facebook, and Twitter social
+              providers. You can sign in or register with credentials or a
+              social account. The server component for Auth.js can be found in
+              the root of the project in the auth.js file, and the custom server
+              functions accompanying this boilerplate can be found in
               /app/api/customAuth.js
             </p>
             <p>
