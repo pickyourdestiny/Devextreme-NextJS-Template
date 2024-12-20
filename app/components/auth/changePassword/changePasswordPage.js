@@ -71,6 +71,7 @@ export default function ChangePasswordPage({ recoveryCode }) {
               width={"100%"}
               type={"default"}
               useSubmitBehavior={true}
+              disabled={pending}
               text={"Continue"}
             ></ButtonOptions>
           </ButtonItem>

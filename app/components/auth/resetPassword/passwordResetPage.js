@@ -55,6 +55,7 @@ export default function PasswordResetPage() {
               type={"default"}
               text="Reset my password"
               useSubmitBehavior={true}
+              disabled={pending}
             ></ButtonOptions>
           </ButtonItem>
           <Item>

@@ -73,6 +73,7 @@ export default function CreateAccountForm() {
             width={"100%"}
             type={"default"}
             useSubmitBehavior={true}
+            disabled={pending}
             text={"Create a new account"}
           ></ButtonOptions>
         </ButtonItem>
