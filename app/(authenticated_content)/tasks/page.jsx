@@ -12,7 +12,9 @@ const TaskList = dynamic(() => import("../../components/taskList/taskList"), {
 });
 
 export default async function Tasks() {
-  await checkSession();
+  // the following code will protect the page and prevent users who are not signed in from accessing it.
+  // await checkSession();
+
   return (
     <>
       <TaskList />
