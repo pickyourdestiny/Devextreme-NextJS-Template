@@ -12,6 +12,7 @@ export const metadata = {
 };
 
 export default async function Home() {
+  // the following code will protect the page and prevent users who are not signed in from accessing it.
   // await checkSession();
   return (
     <>
