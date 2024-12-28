@@ -1,14 +1,7 @@
 import "./registerProcess.scss";
-import dynamic from "next/dynamic";
 import { auth } from "@/auth";
 import { registerProvider } from "@/app/api/auth/customAuth";
-
-const SuccessPage = dynamic(
-  () => import("../../../components/auth/registerProcess/successPage"),
-  {
-    ssr: false,
-  }
-);
+import { SuccessPageComponent } from "@/app/components/auth/registerProcess/successPage";
 
 export default async function RegisterProcess({ searchParams }) {
   const session = await auth();
@@ -21,7 +14,7 @@ export default async function RegisterProcess({ searchParams }) {
 
   return (
     <>
-      <SuccessPage />
+      <SuccessPageComponent />
     </>
   );
 }

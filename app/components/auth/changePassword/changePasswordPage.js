@@ -16,8 +16,9 @@ import Form, {
 } from "devextreme-react/form";
 import { changePassword } from "@/app/api/auth/customAuth";
 import notify from "devextreme/ui/notify";
+import dynamic from "next/dynamic";
 
-export default function ChangePasswordPage({ recoveryCode }) {
+function ChangePasswordPage({ recoveryCode }) {
   const router = useRouter();
   const formData = useRef({ password: "" });
   const { pending } = useFormStatus();
@@ -80,6 +81,13 @@ export default function ChangePasswordPage({ recoveryCode }) {
     </SingleCard>
   );
 }
+
+export const ChangePasswordPageComponent = dynamic(
+  () => Promise.resolve(ChangePasswordPage),
+  {
+    ssr: false,
+  }
+);
 
 const passwordEditorOptions = {
   stylingMode: "filled",

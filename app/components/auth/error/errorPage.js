@@ -6,8 +6,9 @@ import { useSearchParams } from "next/navigation";
 import SingleCard from "../../layout/singleCard";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Button } from "devextreme-react";
+import dynamic from "next/dynamic";
 
-export default function ErrorPage() {
+function ErrorPage() {
   const search = useSearchParams();
   const session = useSession();
 
@@ -37,3 +38,7 @@ export default function ErrorPage() {
     </>
   );
 }
+
+export const ErrorPageComponent = dynamic(() => Promise.resolve(ErrorPage), {
+  ssr: false,
+});

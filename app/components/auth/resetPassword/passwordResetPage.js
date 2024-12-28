@@ -16,8 +16,9 @@ import Form, {
 } from "devextreme-react/form";
 import notify from "devextreme/ui/notify";
 import { resetPassword } from "@/app/api/auth/customAuth";
+import dynamic from "next/dynamic";
 
-export default function PasswordResetPage() {
+function PasswordResetPage() {
   const router = useRouter();
   const formData = useRef({ email: "" });
   const { pending } = useFormStatus();
@@ -70,6 +71,13 @@ export default function PasswordResetPage() {
     </SingleCard>
   );
 }
+
+export const PasswordResetPageComponent = dynamic(
+  () => Promise.resolve(PasswordResetPage),
+  {
+    ssr: false,
+  }
+);
 
 const notificationText =
   "We've sent a link to reset your password. Check your inbox.";

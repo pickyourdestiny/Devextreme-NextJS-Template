@@ -5,9 +5,10 @@ import BuyMeACoffeeButton from "./buyMeACoffee";
 import Link from "next/link";
 import { ScrollView } from "devextreme-react";
 import { useScreenSize } from "../utils/media-query";
+import dynamic from "next/dynamic";
 import "./homePage.scss";
 
-export default function HomePage() {
+function HomePage() {
   const { isXSmall } = useScreenSize();
 
   return (
@@ -187,3 +188,7 @@ export default function HomePage() {
     </>
   );
 }
+
+export const HomePageComponent = dynamic(() => Promise.resolve(HomePage), {
+  ssr: false,
+});

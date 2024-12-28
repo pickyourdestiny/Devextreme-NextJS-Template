@@ -1,14 +1,7 @@
 import "./profile.scss";
-import dynamic from "next/dynamic";
 import { checkSession } from "@/app/api/auth/customAuth";
 import { defaultUser } from "@/app/components/utils/helpers";
-
-const UserProfile = dynamic(
-  () => import("../../components/userProfile/userProfile"),
-  {
-    ssr: false,
-  }
-);
+import { UserProfileComponent } from "@/app/components/userProfile/userProfile";
 
 export const metadata = {
   title: "Profile Page",
@@ -26,7 +19,7 @@ export default async function Profile() {
 
   return (
     <>
-      <UserProfile userProfile={userProfile} />
+      <UserProfileComponent userProfile={userProfile} />
     </>
   );
 }

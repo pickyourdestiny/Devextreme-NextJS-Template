@@ -1,17 +1,10 @@
 import "./error.scss";
-import dynamic from "next/dynamic";
-
-const ErrorPage = dynamic(
-  () => import("../../../components/auth/error/errorPage"),
-  {
-    ssr: false,
-  }
-);
+import { ErrorPageComponent } from "@/app/components/auth/error/errorPage";
 
 export default async function AuthErrors() {
   return (
     <>
-      <ErrorPage />
+      <ErrorPageComponent />
     </>
   );
 }

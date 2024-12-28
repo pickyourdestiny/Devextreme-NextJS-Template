@@ -1,17 +1,10 @@
 import "./register.scss";
-import dynamic from "next/dynamic";
-
-const RegisterPage = dynamic(
-  () => import("../../../components/auth/register/registerPage"),
-  {
-    ssr: false,
-  }
-);
+import { RegisterPageComponent } from "@/app/components/auth/register/registerPage";
 
 export default async function Register() {
   return (
     <>
-      <RegisterPage />
+      <RegisterPageComponent />
     </>
   );
 }

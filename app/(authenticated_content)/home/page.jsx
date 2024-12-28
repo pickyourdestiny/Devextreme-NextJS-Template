@@ -1,10 +1,7 @@
 import "./home.scss";
 import dynamic from "next/dynamic";
 import { checkSession } from "@/app/api/auth/customAuth";
-
-const HomePage = dynamic(() => import("../../components/home/homePage"), {
-  ssr: false,
-});
+import { HomePageComponent } from "@/app/components/home/homePage";
 
 export const metadata = {
   title: "Home Page",
@@ -16,7 +13,7 @@ export default async function Home() {
   // await checkSession();
   return (
     <>
-      <HomePage />
+      <HomePageComponent />
     </>
   );
 }

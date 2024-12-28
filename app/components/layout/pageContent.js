@@ -11,12 +11,8 @@ import { useScreenSize } from "../utils/media-query";
 import { useMenuPatch } from "../utils/patches";
 import { footerInfo } from "@/app/app-info";
 import { Template } from "devextreme-react/core/template";
-import dynamic from "next/dynamic";
+import { FooterComponent } from "./footer";
 import "./pageContent.scss";
-
-const Footer = dynamic(() => import("./footer"), {
-  ssr: false,
-});
 
 export default function PageContent({ children }) {
   const { isXSmall, isLarge } = useScreenSize();
@@ -100,7 +96,7 @@ export default function PageContent({ children }) {
             >
               <div className="content">{children}</div>
               <div className="content-block">
-                <Footer>
+                <FooterComponent>
                   {footerInfo.logo && (
                     <Image
                       src={footerInfo.logo}
@@ -119,7 +115,7 @@ export default function PageContent({ children }) {
                   {footerInfo.title && (
                     <div className="mt-4">{footerInfo.title}</div>
                   )}
-                </Footer>
+                </FooterComponent>
               </div>
             </ScrollView>
           </div>
@@ -129,6 +125,8 @@ export default function PageContent({ children }) {
               selectedItemChanged={onNavigationChanged}
               openMenu={temporaryOpenMenu}
               onMenuReady={onMenuReady}
+              toggleMenu={toggleMenu}
+              menuStatus={menuStatus}
             ></SideNavigationMenu>
           </Template>
         </Drawer>

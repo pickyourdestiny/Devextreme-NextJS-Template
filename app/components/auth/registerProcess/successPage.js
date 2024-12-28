@@ -4,8 +4,9 @@ import React, { useEffect } from "react";
 import SingleCard from "../../layout/singleCard";
 import { useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
+import dynamic from "next/dynamic";
 
-export default function SuccessPage() {
+function SuccessPage() {
   const router = useRouter();
   const session = useSession();
 
@@ -22,3 +23,10 @@ export default function SuccessPage() {
 
   return <SingleCard description="Registration Successful!"></SingleCard>;
 }
+
+export const SuccessPageComponent = dynamic(
+  () => Promise.resolve(SuccessPage),
+  {
+    ssr: false,
+  }
+);

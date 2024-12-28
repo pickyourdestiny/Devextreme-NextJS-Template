@@ -9,9 +9,10 @@ import googleLogo from "../../../assets/logos/google.png";
 import twitterLogo from "../../../assets/logos/twitter.png";
 import facebookLogo from "../../../assets/logos/facebook.png";
 import { providerMap } from "@/auth";
+import dynamic from "next/dynamic";
 import "./registerPage.scss";
 
-export default function registerPage() {
+function RegisterPage() {
   return (
     <SingleCard title={"Sign Up"}>
       <CreateAccountForm />
@@ -48,3 +49,10 @@ export default function registerPage() {
     </SingleCard>
   );
 }
+
+export const RegisterPageComponent = dynamic(
+  () => Promise.resolve(RegisterPage),
+  {
+    ssr: false,
+  }
+);

@@ -10,9 +10,10 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import CredentialsSignin from "./credentialsSignin";
 import { providerMap } from "@/auth";
+import dynamic from "next/dynamic";
 import "./signinPage.scss";
 
-export default function SigninPage() {
+function SigninPage() {
   const router = useRouter();
 
   return (
@@ -53,3 +54,7 @@ export default function SigninPage() {
     </SingleCard>
   );
 }
+
+export const SigninPageComponent = dynamic(() => Promise.resolve(SigninPage), {
+  ssr: false,
+});

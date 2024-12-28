@@ -10,8 +10,15 @@ import { usePathname } from "next/navigation";
 import * as events from "devextreme/events";
 
 export default function SideNavigationMenu(props) {
-  const { children, selectedItemChanged, openMenu, compactMode, onMenuReady } =
-    props;
+  const {
+    children,
+    selectedItemChanged,
+    openMenu,
+    compactMode,
+    onMenuReady,
+    toggleMenu,
+    menuStatus,
+  } = props;
 
   const { isLarge } = useScreenSize();
   const pathname = usePathname();
@@ -66,6 +73,17 @@ export default function SideNavigationMenu(props) {
     }
   }, [pathname, compactMode]);
 
+  useEffect(() => {
+    const treeView = treeViewRef.current && treeViewRef.current.instance();
+    if (!treeView) {
+      return;
+    }
+
+    if (menuStatus === MenuStatus.Opened) {
+      treeView.expandAll();
+    }
+  }, [toggleMenu, menuStatus]);
+
   return (
     <div
       className={"dx-swatch-additional side-navigation-menu"}
@@ -89,3 +107,9 @@ export default function SideNavigationMenu(props) {
     </div>
   );
 }
+
+const MenuStatus = {
+  Closed: 1,
+  Opened: 2,
+  TemporaryOpened: 3,
+};

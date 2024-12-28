@@ -23,6 +23,7 @@ import {
 } from "devextreme-react/linear-gauge";
 import "./taskList.scss";
 import { useScreenSize } from "../utils/media-query";
+import dynamic from "next/dynamic";
 
 function customizeText({ valueText }) {
   return `${valueText} %`;
@@ -45,8 +46,7 @@ function renderTaskSubject(arg) {
 function renderPercentage(args) {
   return args && <div>{args.value} %</div>;
 }
-
-export default function TaskList() {
+function TaskList() {
   const { isXSmall } = useScreenSize();
 
   const onAdaptiveDetailRowPreparing = useCallback((e) => {
@@ -203,6 +203,10 @@ export default function TaskList() {
     </React.Fragment>
   );
 }
+
+export const TaskListComponent = dynamic(() => Promise.resolve(TaskList), {
+  ssr: false,
+});
 
 const dataSource = {
   store: {

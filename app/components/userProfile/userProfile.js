@@ -8,8 +8,9 @@ import Image from "next/image";
 import "devextreme-react/text-area";
 import { useScreenSize } from "../utils/media-query";
 import { ScrollView } from "devextreme-react";
+import dynamic from "next/dynamic";
 
-export default function UserProfile({ userProfile }) {
+function UserProfile({ userProfile }) {
   const [bio, setBio] = useState(userProfile.notes);
 
   const employeeRef = useRef(userProfile);
@@ -98,6 +99,13 @@ export default function UserProfile({ userProfile }) {
     </React.Fragment>
   );
 }
+
+export const UserProfileComponent = dynamic(
+  () => Promise.resolve(UserProfile),
+  {
+    ssr: false,
+  }
+);
 
 const idEditorOptions = { readOnly: true };
 const notesEditorOptions = { height: 100, maxLength: 300 };
