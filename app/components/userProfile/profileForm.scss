@@ -1,0 +1,21 @@
+.max-bio-height {
+  height: 120px;
+}
+
+.form-avatar {
+  float: left;
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#avatar-image {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+.provider-button {
+  margin-top: 9px;
+  margin-bottom: 9px;
+
+  .dx-button-content {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr !important;
+  }
+}

@@ -1,0 +1,24 @@
+@use "sass:color";
+/*common*/
+$base-accent: #0f6cbd;
+$base-border-radius: 4px;
+
+/*light mode variables*/
+$base-bg-light: #ffffff;
+$base-bg-light-darker: color.adjust($base-bg-light, $blackness: 10%);
+$base-border-color-light: #e0e0e0;
+$base-text-color-light: #242424;
+$base-text-color-light-alpha-7: color.adjust(
+  $base-text-color-light,
+  $lightness: 30%
+);
+
+/*dark mode variables*/
+$base-bg-dark: #292929;
+$base-bg-dark-lighter: color.adjust($base-bg-dark, $lightness: 10%);
+$base-border-color-dark: #616161;
+$base-text-color-dark: #ffffff;
+$base-text-color-dark-alpha-7: color.adjust(
+  $base-text-color-dark,
+  $blackness: 30%
+);

@@ -1,0 +1,20 @@
+@import "../../../../themes/generated/variables.modes.scss";
+
+.create-account-form {
+  .login-link {
+    font-size: 16px;
+    text-align: center;
+
+    a {
+      color: $base-accent;
+    }
+
+    .light-mode & {
+      color: $base-text-color-light-alpha-7;
+    }
+
+    .dark-mode & {
+      color: $base-text-color-dark-alpha-7;
+    }
+  }
+}

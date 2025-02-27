@@ -1,0 +1,12 @@
+@import "../../../../themes/generated/variables.base.scss";
+
+.header {
+  margin-bottom: 30px;
+  .title {
+    color: var(--base-text-color);
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+}

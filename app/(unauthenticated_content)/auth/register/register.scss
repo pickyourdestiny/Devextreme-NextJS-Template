@@ -1,0 +1,20 @@
+@import "../../../../themes/generated/variables.modes.scss";
+
+.policy-info {
+  margin: 20px 0 10px 0;
+
+  font-size: 14px;
+  font-style: normal;
+
+  a {
+    color: $base-accent;
+  }
+
+  .light-mode & {
+    color: $base-text-color-light-alpha-7;
+  }
+
+  .dark-mode & {
+    color: $base-text-color-dark-alpha-7;
+  }
+}

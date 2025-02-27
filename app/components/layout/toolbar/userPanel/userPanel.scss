@@ -1,0 +1,20 @@
+@import "../../../../../themes/generated/variables.base.scss";
+
+.user-menu {
+  .dx-icon {
+    margin-left: 7px;
+    margin-right: 3px;
+  }
+
+  .item-template-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .dx-menu-item-text {
+    flex-grow: 1;
+    margin: 0px 13px;
+  }
+}

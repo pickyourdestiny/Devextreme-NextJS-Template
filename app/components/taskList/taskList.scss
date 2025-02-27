@@ -1,0 +1,17 @@
+//This formats the adaptive detail row
+
+#task-list {
+  .dx-field-item-label {
+    opacity: 0.6;
+  }
+  .dx-field-item-content {
+    line-height: unset;
+    padding: 0;
+  }
+  height: 100%;
+  width: 100%;
+}
+
+.dx-datagrid-filter-row {
+  background-color: transparent;
+}
