@@ -15,7 +15,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head id="main-head"></head>
       <body className={clientCSS}>
         <main id="root">
           <MainProviders>
