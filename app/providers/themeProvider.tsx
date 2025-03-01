@@ -19,16 +19,17 @@ function ThemeProvider({ children }: React.PropsWithChildren<unknown>) {
   }, []);
 
   useEffect(() => {
-    const headElement = document.getElementById("root");
+    const mainElement = document.getElementById("root");
 
     if (theme) {
       const { link } = addStyleSheet(theme);
+      const style = styles.find((item) => item.name === theme);
       window.localStorage.setItem(storageKey, theme);
-      currentTheme(`fluent.blue.${theme}`);
+      currentTheme(style.baseThemeName);
       refreshTheme();
 
       return () => {
-        headElement.removeChild(link);
+        mainElement.removeChild(link);
       };
     }
   }, [theme]);
@@ -49,8 +50,16 @@ const useTheme = () => useContext(ThemeContext);
 export { ThemeProvider, useTheme };
 
 const styles = [
-  { name: "light", href: "/theme.lightmode.css" },
-  { name: "dark", href: "/theme.darkmode.css" },
+  {
+    name: "light",
+    baseThemeName: "fluent.blue.light",
+    href: "/theme.lightmode.css",
+  },
+  {
+    name: "dark",
+    baseThemeName: "fluent.blue.dark",
+    href: "/theme.darkmode.css",
+  },
 ];
 
 function addStyleSheet(theme: ThemeContextType["theme"]) {

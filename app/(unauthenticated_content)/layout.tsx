@@ -11,9 +11,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head id="main-head"></head>
       <body className={clientCSS}>
-        <div id="root">
+        <main id="root">
           <MainProviders>
             <div className="main-layout">
               <div className="main-content">
@@ -24,7 +23,7 @@ export default function RootLayout({
               <Footer />
             </div>
           </MainProviders>
-        </div>
+        </main>
       </body>
     </html>
   );
