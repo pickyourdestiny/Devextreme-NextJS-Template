@@ -2,21 +2,17 @@
 
 import React from "react";
 import SideNavigationMenu from "./sideNavigationMenu";
-import Drawer from "devextreme-react/drawer";
+import { Drawer as DrawerWidget } from "devextreme-react/drawer";
 import { useScreenSize } from "@/utils/media-query";
 import { useDrawer } from "../../../providers/drawerProvider";
 
-export default function DrawerContent({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Drawer({ children }: { children: React.ReactNode }) {
   const { isXSmall, isLarge } = useScreenSize();
   const { menuStatus, onOutsideClick, MenuStatus, patchCssClass } = useDrawer();
 
   return (
     <>
-      <Drawer
+      <DrawerWidget
         className={["drawer", patchCssClass].join(" ")}
         position={"before"}
         closeOnOutsideClick={onOutsideClick}
@@ -29,7 +25,7 @@ export default function DrawerContent({
         component={SideNavigationMenu}
       >
         <div className="container overflow-y">{children}</div>
-      </Drawer>
+      </DrawerWidget>
     </>
   );
 }

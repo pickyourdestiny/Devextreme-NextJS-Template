@@ -1,5 +1,5 @@
 import { DrawerProvider } from "../providers/drawerProvider";
-import DrawerContent from "../components/layout/drawer/drawer";
+import Drawer from "../components/layout/drawer/drawer";
 import MainToolBar from "../components/layout/toolbar/mainToolbar";
 import { MainProviders } from "../contexts/mainProviders";
 import Footer from "../components/layout/footer/footer";
@@ -24,7 +24,7 @@ export default function RootLayout({
                   <MainToolBar />
                 </div>
                 <div className="main-content">
-                  <DrawerContent>{children}</DrawerContent>
+                  <Drawer>{children}</Drawer>
                 </div>
               </DrawerProvider>
               <AnimationWrapper>
