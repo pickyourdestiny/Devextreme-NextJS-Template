@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clientCSS}>
+      <body suppressHydrationWarning className={"dx-viewport"}>
         <main id="root">
           <MainProviders>
             <div className="main-layout">
@@ -28,6 +28,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-const clientCSS =
-  "dx-viewport dx-device-desktop dx-device-generic dx-theme-fluent dx-theme-fluent-typography dx-color-scheme-blue-light";
