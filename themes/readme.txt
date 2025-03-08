@@ -22,7 +22,7 @@ further customize the 'light' and 'dark' modes you can do so in the scss file fo
 classes. An example of this can be seen in the "SideNavigationMenu.scss" file located in the ('/app/components/layout/drawer/') directory.
 
 The variables.base.scss file is manually created to mix the light mode and dark mode variables together (as shown within this file) so 
-that you only need to use the one variables.modes.scss file in each component scss file to reference those variables. AgainbBy default if
+that you only need to use the one variables.modes.scss file in each component scss file to reference those variables. Again by default if
 you switch between dark and light themes the default styling for each will be applied, but if you want to modify the base variables 
 themselves (like $base-bg or $base-text-color) for specific elements than that is where this file comes into use. Make sure to specify
 which mode you want to use these variables in as shown:
