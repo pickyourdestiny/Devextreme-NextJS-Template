@@ -112,8 +112,3 @@ const tabIndex = -1;
 const userButtonAttr = {
   id: "header-user-button",
 };
-
-const themes = [
-  { icon: "sun", title: "light" },
-  { icon: "moon", title: "dark" },
-];
