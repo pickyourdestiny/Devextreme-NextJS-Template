@@ -16,8 +16,6 @@ export default function ThemeSwitch() {
     setTheme(newTheme);
   }, [setTheme, theme]);
 
-  console.log(baseBgDark);
-
   const container = useMemo(() => {
     return {
       width: 50,

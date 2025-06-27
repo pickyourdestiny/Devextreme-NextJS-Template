@@ -15,7 +15,7 @@ function ThemeProvider({ children }: React.PropsWithChildren<unknown>) {
     const storedTheme = window?.localStorage.getItem(storageKey) as ThemeType;
     if (storedTheme) {
       setTheme(storedTheme);
-    }
+    } else setTheme("light");
   }, []);
 
   useEffect(() => {
