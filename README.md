@@ -17,7 +17,7 @@ from being accessed from the server if a user does not log in and sample code is
 
 - You can demo this template at the following site: https://nextjsapptemplate.netlify.app/home
 
-If you find this template useful please add a star.
+- If you find this template useful please add a star.
 
 ## Getting Started
 
