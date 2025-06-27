@@ -15,7 +15,7 @@ from being accessed from the server if a user does not log in and sample code is
 
 - This template was built using TypeScript
 
-- You can preview this template at the following site: https://nextjsapptemplate.netlify.app/home
+- You can demo this template at the following site: https://nextjsapptemplate.netlify.app/home
 
 If you find this template useful please add a star.
 
